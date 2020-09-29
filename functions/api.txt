@@ -1,0 +1,48 @@
+
+method : GET
+url : https://us-central1-colors-rest-api.cloudfunctions.net/api/gg  
+description : simply for testing 
+result : "this is for testing route"
+
+
+
+method : POST
+url : https://us-central1-colors-rest-api.cloudfunctions.net/api/auth/register
+      
+description : register users with  
+input : {
+    "name": "some-name", // min length of 5
+    "email" : "some-email",
+    "password" : "some-pwd"  // min length of 5
+}
+note : 
+    recieves token after successful registration
+    if user already exists throws error response
+
+
+method : POST
+url : https://us-central1-colors-rest-api.cloudfunctions.net/api/auth/login
+description : login user with email,password
+input : {
+    "email" : "some-email",
+    "password" : "some-pwd"  // min length of 5
+}
+note : 
+    recieves token after successfully signing in
+    use this token to get "/protected" route
+
+
+
+
+method : GET
+url : https://us-central1-colors-rest-api.cloudfunctions.net/api/protected
+description : sign in users with token ; format : Bearer <token> 
+result : {
+    "userId": "zVsjKLifXgSusILsIAkZePb5PG42",
+    "name": "mounika"
+}
+note:
+token expiration is 60s for testing purpose
+once token expires sends error response
+
+
