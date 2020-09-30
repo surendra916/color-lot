@@ -27,7 +27,7 @@ exports.loginUser = async (req, res, next) => {
             }
         }
         else { 
-            console.log('user doc doesnt exist');
+            console.log('user doc doesnt exist bro');
             return res.status(404).send('user doc doesnt exist')
         }
         
