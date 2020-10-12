@@ -1,0 +1,16 @@
+(snapShot => {
+//             const { worker, options } = snapShot.data();
+
+//             const job = workers[worker](options)
+//                 .then(() => snapShot.ref.update({ status: 'complete' }))
+//                 .catch((err: any) => {
+//                     console.log(err);
+//                     snapShot.ref.update({ status: 'error' })
+//                 });
+            
+//             jobs.push(job);
+//         })// for each
+
+//         return await Promise.all(jobs);
+
+//     });

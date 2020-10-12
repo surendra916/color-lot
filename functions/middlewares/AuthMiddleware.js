@@ -24,3 +24,29 @@ module.exports = {
         }
     }
 }
+
+
+
+
+// var jwt = require('jsonwebtoken'),
+//   roles = require('../models/user').roles; 
+
+// // authentication middleware
+// // check if the given jwt token is valid
+// var requireValidToken = function(req, res, next) {
+//   var token = req.body.token || req.query.token || req.headers['x-access-token'];
+//   if (token) {
+//     try {
+//       var decoded = jwt.verify(token, req.app.get('superSecret'));
+//     } catch(err) {
+//       return res.json({ success: false, message: 'Failed to authenticate token.' });  
+//     }
+//     req.user = decoded.user;
+//     next();
+//   } else {
+//     return res.status(403).send({ 
+//         success: false, 
+//         message: 'No token provided.' 
+//     });
+//   }
+// };
